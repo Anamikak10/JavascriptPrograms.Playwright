@@ -1,0 +1,30 @@
+class bankaccount
+{
+    #balance
+    constructor(actHolder,initialactBalance)
+    {
+        this.actHolder=actHolder
+        this.#balance=initialactBalance
+    }
+    showBalance()
+    {
+        console.log(this.#balance)
+    }
+    deposit(amt)
+    {
+        this.#balance+=amt
+    }
+    withdraw(amt)
+    {
+        this.#balance-=amt
+    }
+}
+const bankaccountobj=new bankaccount("anamika",10000)
+bankaccountobj.actHolder="anu"
+console.log(bankaccountobj.actHolder)
+//bankaccountobj.#balance=809709
+bankaccountobj.showBalance()
+bankaccountobj.deposit(5000)
+bankaccountobj.showBalance()
+bankaccountobj.withdraw(500)
+bankaccountobj.showBalance()
